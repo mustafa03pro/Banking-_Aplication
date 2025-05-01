@@ -1,0 +1,79 @@
+<script>
+
+
+let balalance=0;
+
+function bankApplication(){
+    let exit=false;
+    while(!exit){
+        
+        let choice=+prompt("--- Bank Account Menu ---\n1. create Account\n2. Deposit Money\n3. Withdraw Money\n4. Check Balance\n5. Exit");
+    switch(choice){
+        case 1:createAccount();
+        break;
+        case 2:depositeMoney();
+        break;
+        case 3:withdraw();
+        break;
+        case 4:checkBalance();
+        break;
+        case 5:alert("Thank you for banking with us.");
+        exit=true;
+        break;
+        default :alert(`invalid choice choose the no 1-5`);
+        
+
+    }
+
+
+    }
+    
+}
+function createAccount(){
+    let name=prompt("enter the name");
+    let accono=+prompt("enter the accont no");
+    let amount=+prompt("enter the deposit amount minimum");
+    if(amount>=2000){
+        balalance=amount;
+        alert(`your account is created successfully\nname=${name}\naccont no=${accono}\nand Amount ${balalance}`);
+
+    }
+    else{
+        alert(`invalid amount minimum amount should be entered 2000 your amount is${amount}`);
+    }
+    
+    
+    
+}
+function depositeMoney(){
+    let deposit=+prompt("enter the amount to deposit");
+    balalance+=deposit
+    alert(`The amount deposit ${deposit}\ntotal balane is ${balalance}`);
+
+}
+function withdraw(){
+    let wi=+prompt("enter the amount to withderaw");
+    if(wi<balalance){
+        balalance-=wi;
+        alert(`the amount you withdwraw${wi}\n the total balance ${balalance}`);
+
+    }
+    else{
+        alert(`the withdraw amount is larger cannot be withdraw`);
+
+    }
+    
+
+
+}
+
+function checkBalance(){
+    alert(`the balnce is ${balalance}`);
+
+}
+bankApplication();
+
+
+
+
+</script>

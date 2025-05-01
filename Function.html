@@ -1,0 +1,28 @@
+<!DOCTYPE html>  
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Functions</title>				
+  </head>
+  <body>
+	<h3>demo on Immediately Invoked Functions</h3>	
+	<script>
+		//IIF Expr
+		(function() {
+			document.write('hi, i am iif expr<br>');
+		})	();		
+
+		//IIF Arrow
+		(
+			()=>{ 
+				document.write('hi, i am iif arrow<br>'); 
+			}
+		)();
+
+		//IIF Expr
+		(function(a,b) {
+				document.write("sum is "+(a+b));
+		})	(11,22);
+	</script> 
+  </body>
+</html>
